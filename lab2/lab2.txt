@@ -1,0 +1,23 @@
+Javascript ES5    "stary"
+                    GOOD PARTS
+-script - interpretowany
+-object-oriented 
+- JEST JĘZYKIEM FUNCTION ORIENTED !!!
+    funkcja jako:
+        - zmienna
+        - argument innej funkcji
+        - wartość zwracana z funkcji
+
+HOISTING <- wynosi deklaracje funkcji do góry!!!!   
+
+
+THIS <-- KONTEKSTY WYWOŁANIA DZIAŁANIA FUNKCJI
+    1) Funkcja (zwykły kontekst)
+    2) KONSTRUKTORA!!! <- duza litera
+    3) Metoda
+    4) Apply/Call
+
+
+Zadanie: zrób moduł z interfejsem publicznym dla swojej dziedziny. Gdzieś musi być inicjalizacja. 
+
+temat: Druzyna piłkarska (Football teams)     
