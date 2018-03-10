@@ -19,5 +19,10 @@ THIS <-- KONTEKSTY WYWOŁANIA DZIAŁANIA FUNKCJI
 
 
 Zadanie: zrób moduł z interfejsem publicznym dla swojej dziedziny. Gdzieś musi być inicjalizacja. 
+         3 metody, ktore cos zwroca
 
 temat: Druzyna piłkarska (Football teams)     
+
+Gdzie się uczyć JS: 
+    javascript mozilla develepoers
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript

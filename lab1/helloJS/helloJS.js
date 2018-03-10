@@ -209,3 +209,14 @@ var pies = {
 
 sayKwaKwa.apply(kaczka,['kaczka']);
 sayKwaKwa.apply(pies, ['pies']);
+
+////
+
+
+var number = [1,2 ,3,4];
+
+var evenNumbers = number.filter(function(item){
+    return item % 2 === 0;
+})
+
+console.log(evenNumbers);
