@@ -9,20 +9,19 @@ var FootballTeam = (function () {
 
     
 
-    amountPlayers = function(){
+    var amountPlayers = function(){
         return this.players.length;
     };
 
-     getThreeFirstLettersTeamName = function(){
+    var getThreeFirstLettersTeamName = function(){
         return this.name[0].toUpperCase()+this.name[1].toUpperCase()+this.name[2].toUpperCase();
     };
 
-     getUppercaseName =  function(){
+    var getUppercaseName =  function(){
         return this.name.toUpperCase();
     };
 
     return{
-        name: name,
         players: players,
         amountPlayers: amountPlayers,
         getThreeFirstLettersTeamName: getThreeFirstLettersTeamName,
