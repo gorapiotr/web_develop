@@ -1,45 +1,33 @@
-var FootballTeam = function(name, country , players , leauge) {
-
-    this.name = name,
-    this.country  = country,
-    this.players = players,
-    this.leauge = leauge,
-
-    /*FootballTeam = function(name, country , players, leauge)
-        {
-            this.name = name;
-            this.country = country;
-            this.players = players;
-            this.leauge = leauge;
-        },*/
-  
 
 
-    this.getUppercaseName =  function(){
-        return this.name.toUpperCase();
+var FootballTeam = (function () {
+
+    var name = "Liverpool";
+    var country = "England";
+    var leauge = "Premier League";
+    var players = ["Mane", "Firmino", "van Dijk", "Henderson", "Milner", "Loveren", "Moreno", "Karius"];
+
+    
+
+    amountPlayers = function(){
+        return this.players.length;
     };
 
-    this.getThreeFirstLettersTeamName = function(){
+     getThreeFirstLettersTeamName = function(){
         return this.name[0].toUpperCase()+this.name[1].toUpperCase()+this.name[2].toUpperCase();
     };
 
-    this.amountPlayers = function(){
-        return this.players.length;
+     getUppercaseName =  function(){
+        return this.name.toUpperCase();
     };
-} 
 
-var liverpoolPlayers = ["Mane", "Firmino", "van Dijk", "Henderson", "Milner", "Loveren", "Moreno", "Karius"];
+    return{
+        name: name,
+        players: players,
+        amountPlayers: amountPlayers,
+        getThreeFirstLettersTeamName: getThreeFirstLettersTeamName,
+        getUppercaseName: getUppercaseName
+    }
 
-var Liverpool = new FootballTeam("Liverpool", "England", liverpoolPlayers, "Premier League");
+})();
 
-//class
-//console.log(Liverpool);
-
-//First method
-//console.log(Liverpool.getUppercaseName());
-
-//Second method
-//console.log(Liverpool.getThreeFirstLettersTeamName());
-
-//Third method
-console.log(Liverpool.amountPlayers());
