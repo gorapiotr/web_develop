@@ -13,15 +13,19 @@ HOISTING <- wynosi deklaracje funkcji do góry!!!!
 
 THIS <-- KONTEKSTY WYWOŁANIA DZIAŁANIA FUNKCJI
     1) Funkcja (zwykły kontekst)
+            this - Global/Window
     2) KONSTRUKTORA!!! <- duza litera
+            this - jezeli "new" to this powiaze do obiektu
     3) Metoda
+            this wiaze do obiektu
     4) Apply/Call
+            this wiaze do przekazywanego obiektu
 
 
 Zadanie: zrób moduł z interfejsem publicznym dla swojej dziedziny. Gdzieś musi być inicjalizacja. 
          3 metody, ktore cos zwroca
 
-temat: Druzyna piłkarska (Football teams)     
+temat: Druzyna piłkarska (Football team)     
 
 Gdzie się uczyć JS: 
     javascript mozilla develepoers
