@@ -14,7 +14,7 @@ Shape.prototype.message = function(){   ///prototype pozwala nam odwolac się do
 Shape.prototype = {                     //bardziej popularna sładnia
     getY: function()
     {
-        return this.getY;
+        return this.y;
     }
 };
 
@@ -48,7 +48,7 @@ Circle.prototype.area = function() {
 
 var aCircle = new Circle(20,30,40);
 
-console.log(aCircle.area());
+console.log(aCircle.getY());
 console.log(aCircle)
 
 
