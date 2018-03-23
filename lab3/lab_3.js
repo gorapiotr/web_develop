@@ -32,7 +32,7 @@ GoalKeeper.prototype.getSaveTechnique = function(){
 
 var preferredFoot = {
     left: "left",
-    rigth: "right"
+    right: "right"
 }
 
 //Child class
