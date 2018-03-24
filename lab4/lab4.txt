@@ -1,0 +1,45 @@
+ES5 / ES6 2015 <- transpiler zmienia kod ES6 na ES6, powszechnie nazywa się compilator
+
+https://babeljs.io 
+
+npm install -g babel-cli                                        | instalowanie globalnie babel 
+
+./node_modules/.bin/babel lab4.js --out-file lab4_compiled.js   | JEZELI NIE MA GLOBALNEGO DOSTEPU
+
+-przegladarki                                                   |   PRESETS: 
+-serwer                                                         |
+
+
+// Array map + lambda exp
+var doubles = [1, 2, 3].map( item => item*2);                   | wyrazenie lambda
+
+
+// Array filter
+var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+
+
+ES6 
+-lambda
+-classes
+-template string (wygodne) konkatenacja ${a}  ` <- ok ' <- zle
+-default + rest+ spread
+-let <--MEGA WAZNE, const  
+-iterators + for ... of (foreach)
+
+//// Zadania poprzednie ////
+zad.  modul ES5
+zad. dziedziczenie ES5
+
+
+
+//// ZADANIE //// 
+zad. to wszystko co było wcześniej złączyć w ES6 z uzyciem wszystkiego co było w ES6 (lambda, classes, template itp)
+
+
+
+
+
+
