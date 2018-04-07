@@ -1,0 +1,21 @@
+biblioteka rx.js 
+
+http://reactivex.io/languages.html
+
+
+[].forEach() <- dla kazdego elementu
+[].map() <- na kazdym elemencie
+[].filter() <- wybierz te elementy, ktore spelniaja warunek
+
+
+live search (pasek wyszukiwania w czasie rzeczywistym)
+
+"Subject, Source, Event, Observable"
+
+
+
+Zdarzenia
+
+onNext()
+onError()
+onComplate()

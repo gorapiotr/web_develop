@@ -1,0 +1,17 @@
+{
+  "name": "FootballTeam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "local-server": "^0.1.8",
+    "rxjs": "^5.5.8"
+  }
+}
