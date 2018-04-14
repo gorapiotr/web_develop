@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+    <div ng-app="wikiApp" ng-controller="wikiController">
+        <input  id="q">
+        <table>
+                <tr ng-repeat="w in wikiResponse">
+                    <td>{{w}}</td>
+                </tr>
+        <table>
+            {{name}}
+            {{test}}
+        <!--<div id='result'></div>-->
+        <div ng-click></div>
+    </div>
+
+        
+</body>
+    <!--JQUERY, RX, app.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="/node_modules/rxjs/bundles/Rx.min.js"></script>
+    <script src="/wikiAppController.js"></script>
+</html>
