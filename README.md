@@ -23,3 +23,14 @@ Infomatyka stopień II, sem II
 * [Zadanie 1 JavaScript](https://github.com/gorapiotr/web_develop/blob/master/lab5/app.js) (Wyszukiwarka WikipediaAPI)
 * [Zadanie 2 HTML](https://github.com/gorapiotr/web_develop/blob/master/lab5/game.html) (Gra wykorzystująca biblioteke RxJS)
 * [Zadanie 2 JavaScript](https://github.com/gorapiotr/web_develop/blob/master/lab5/game.js) (Gra wykorzystująca biblioteke RxJS)
+
+## Lab 6
+Stworzenie klas w TypeScript i transpilacja do JavaScript za pomocą babel
+* [Klasy w TypeScript](https://github.com/gorapiotr/web_develop/tree/master/lab6/tsc1/src)
+* [Klasy w JavaScript](https://github.com/gorapiotr/web_develop/tree/master/lab6/tsc1/lib)
+
+## Lab 7
+* [Zadanie](https://github.com/gorapiotr/web_develop/tree/master/lab7/Football/src/app) (CRUD dla tematu FootballTeam w Angular)
+
+## Lab 8
+* [Zadanie](https://github.com/gorapiotr/web_develop/blob/master/lab7/Football/src/app/find-player/find-player.component.ts) (Wyszukiwarka piłkarzy z wykorzystaniem ReactiveForm i subscribe)
