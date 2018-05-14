@@ -1,0 +1,12 @@
+<div *ngIf="playerToShow" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><strong>{{playerToShow.playerName}} {{playerToShow.playerSurname}}</strong></h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Number: </strong>{{playerToShow.number}}</li>
+            <li class="list-group-item"><strong>Position: </strong>{{playerToShow.position}}</li>
+            <li class="list-group-item"><strong>Height: </strong>{{playerToShow.height}}</li>
+          </ul>
+        <br>  
+      <a href="#" class="btn btn-primary">Edit!</a>
+    </div>
+</div>

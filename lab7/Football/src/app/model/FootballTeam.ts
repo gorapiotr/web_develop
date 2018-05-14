@@ -2,7 +2,7 @@ import {Forward} from './ForwardPlayer';
 import {GoalKeeper} from './GoalKeeper';
 import { FootballPlayer } from './FootballPlayer';
 
-class FootballTeam{
+export class FootballTeam{
 
     constructor (public name:string, public country:string, public league:string, public  players) {
         this.name = name; 
@@ -78,28 +78,3 @@ class FootballTeam{
 
 
 
-/// Players
-let JerzyDudek = new GoalKeeper("Jerzy", "Dudek", "Acrobatic",182,1, 34);
-let RobertLewandowski = new Forward("Robert", "Lewandowski","Left", 190, 11,45);
-let MohamedSalah = new Forward("Mohamed", "Salah", "Rigth", 185,11,23);
-let RobertoFirmino = new Forward("Roberto", "Firmino", "Left", 178,7,34);
-
-/// Players array
-let team: Array<FootballPlayer> = [JerzyDudek, RobertLewandowski, MohamedSalah, RobertoFirmino];
-
-/// Team
-let Liverpool = new FootballTeam("Liverpool", "England", "Premier League", team);
-
-
-//console.log(JerzyDudek);
-//console.log(RobertLewandowski);
-//console.log(JerzyDudek.playerPresentation());
-
-//console.log(Liverpool);
-//console.log(Liverpool.getPlayersTShirtNumbers());
-//this function increase appearance after match
-console.log(MohamedSalah.appearances);
-Liverpool.increaseAppearanceAfterMatch();
-console.log(MohamedSalah.appearances);
-
-console.log(Liverpool.findPlayersListWithBiggestAppearances(2));

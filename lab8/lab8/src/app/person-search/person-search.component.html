@@ -1,0 +1,10 @@
+<p>
+  person-search works!
+</p>
+
+<input type="search" placeholder="Search term" [formControl]="searchControl">
+<ul>
+  <li *ngFor="let searchItem of searchItems">
+    {{searchItem}}
+  </li>
+</ul>

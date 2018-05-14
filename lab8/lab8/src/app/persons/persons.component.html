@@ -1,0 +1,8 @@
+<ul>
+  <!--(click)="selectedPerson(person) -->
+  <li *ngFor="let person of persons" (click)="selectPerson(person)">
+      {{person.name}}
+  </li>
+</ul>
+
+<app-person-details *ngIf="selectedPerson" [personToShow]="selectedPerson" (childChanged)="detalisChanged($event)"></app-person-details>

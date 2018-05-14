@@ -1,0 +1,6 @@
+komunikacja pomiędzy parent component a child component
+
+
+parent component ---> child component  [] syntax
+
+ parent component <--- child component  () event
