@@ -1,0 +1,12 @@
+<form [formGroup]="myForm" (ngSubmit)="mySubmit(myForm.value)">
+  <input type="text" [formControl]="myForm.controls['imie']">
+  <input type="text" [formControl]="myForm.controls['rokUr']">
+  <button type="submit">Ok</button>  
+</form>
+
+<div *ngIf="imie.hasError('required')">Imie wymagane</div>
+<div *ngIf="imie.hasError('minlength')">Imie musi mieć trzy litery</div>
+<div *ngIf="imie.hasError('bolekValue')">Bolek</div>
+
+<div *ngIf="rokUr.hasError('minlength')">Numer musi miec min 4 litery</div>
+<div *ngIf="rokUr.hasError('maxlength')">Numer musi miec max 4 litery</div>

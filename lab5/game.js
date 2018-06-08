@@ -72,7 +72,6 @@ class Player {
 
         if(this.y === objY+100 && (Math.abs(this.x - objX))< 100){
             console.log("Coll down y");
-            alert("Collision");
         }
 
     }

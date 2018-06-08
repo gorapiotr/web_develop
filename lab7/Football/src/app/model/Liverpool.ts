@@ -18,7 +18,7 @@ let RobertKarius = new GoalKeeper("Robert", "Karius", "Basic", 190, 90, 21);
 let team: Array<FootballPlayer> = [JerzyDudek, RobertLewandowski, MohamedSalah, RobertoFirmino, RobertKarius];
 
 /// Team
-export const Liverpool = new FootballTeam("Liverpool", "England", "Premier League", team);
+export const Liverpool:FootballTeam = new FootballTeam("Liverpool", "England", "Premier League", team);
 
 
 

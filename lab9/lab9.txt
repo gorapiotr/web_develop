@@ -1,0 +1,7 @@
+### lab9
+
+zadanie, formularze z walidacjami, 
+
+STAN FORMULARZA -zmieniony
+                -bez zmian
+                -poprawny

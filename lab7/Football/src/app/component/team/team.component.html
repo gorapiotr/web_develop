@@ -1,0 +1,59 @@
+<!--row 1 -->
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-6"><h1>{{team.name}}</h1></div>
+    <div class="col-4"></div>
+</div>
+
+<!--row 2 -->
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-6">
+    <!-- Team table -->
+    <table class="table table-hover table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Posiotion</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of team.players; let i=index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{player.playerName}}</td>
+          <td>{{player.playerSurname}}</td>
+          <td>{{player.position}}</td>
+          <td>
+               <!-- Edit button -->
+              <i class="far fa-edit" (click)="selectPlayer(i)" aria-label="Close" data-toggle="modal" data-target="#editPlayer"></i>
+              <!-- Remove button -->
+              <i class="far fa-trash-alt" (click)="setRemovePlayerIndex(i)" data-toggle="modal" data-target="#removePlayer"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-3">
+    <!-- Add new player -->
+    <app-add-player-to-team (addPlayerToTeamArray)="addPlayer($event)"></app-add-player-to-team>
+  </div>
+  <div class="col-1"></div>
+</div>
+
+<app-edit-player [model]="selectedPlayer"></app-edit-player>
+<app-remove-player [model]="selectedPlayerIndex" [team]="team"></app-remove-player>
+<hr>
+
+<!-- row 3 -->
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">            
+    <app-find-player [team]="team"></app-find-player>
+  </div>
+  <div class="col-2"></div>
+</div>
+
+

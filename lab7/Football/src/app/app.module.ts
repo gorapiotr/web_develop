@@ -4,12 +4,14 @@ import { FormsModule }   from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { PlayerComponent } from './player/player.component';
-import { TeamComponent } from './team/team.component';
-import { AddPlayerToTeamComponent } from './add-player-to-team/add-player-to-team.component';
-import { EditPlayerComponent } from './edit-player/edit-player.component';
-import { FindPlayerComponent } from './find-player/find-player.component';
+import { PlayerComponent } from './component/player/player.component';
+import { TeamComponent } from './component/team/team.component';
+import { AddPlayerToTeamComponent } from './component/add-player-to-team/add-player-to-team.component';
+import { EditPlayerComponent } from './component/edit-player/edit-player.component';
+import { FindPlayerComponent } from './component/find-player/find-player.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RemovePlayerComponent } from './component/remove-player/remove-player.component';
+import { TeamService } from './service/team.service';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TeamComponent,
     AddPlayerToTeamComponent,
     EditPlayerComponent,
-    FindPlayerComponent
+    FindPlayerComponent,
+    RemovePlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
