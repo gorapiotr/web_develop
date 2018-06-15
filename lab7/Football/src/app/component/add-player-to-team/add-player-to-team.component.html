@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-dark" (click)="changeShowFormProperty()">Add new player</button>
-
+<!--
 <form *ngIf="showForm" #playerForm="ngForm" ngNativeValidate>
     <div class="form-group">
       <label for="playerName">Name</label>
@@ -29,6 +29,62 @@
       </div>
     <button type="button" class="btn btn-secondary" (click)="playerForm.reset()">New Player</button>
     <button type="submit" class="btn btn-default" (click)="addPlayerToTeam()" [disabled]="!playerForm.form.valid">Create</button>
+</form>-->
+
+<form *ngIf="showForm" [formGroup]="addPlayerForm" >
+    <div class="form-group">
+        <label for="playerName">Name</label>
+        <input type="text" class="form-control" formControlName="playerName">
+    </div>
+    <div class="form-group">
+        <label for="playerSurname">Surname</label>
+        <input type="text" class="form-control" formControlName="playerSurname">
+    </div>
+    <div class="form-group">
+        <label for="playerNumber">Number</label>
+        <input type="number" class="form-control" formControlName="number">
+    </div>
+    <div class="form-group">
+        <label for="playerNumber">Height</label>
+        <input type="number" class="form-control" formControlName="height">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect2">Position</label>
+        <select multiple class="form-control" formControlName="position" required>
+            <option *ngFor="let position of playerPosition" [value]="position">{{position}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="playerNumber">Appearances</label>
+        <input type="number" class="form-control" formControlName="appearances">
+    </div>
+    <!-- alerts -->
+    <!-- name -->
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('playerName').errors?.minlength">Name: min 3 chars</div>
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('playerName').errors?.maxlength">Name: max 20 chars</div>
+    <div class="alert alert-danger" *ngIf="addPlayerForm.get('playerName').errors?.required">Name: empty!</div>
+    <!-- surname -->
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('playerSurname').errors?.minlength">Surname: min 3 chars</div>
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('playerSurname').errors?.maxlength">Surame: max 20 chars</div>
+    <div class="alert alert-danger" *ngIf="addPlayerForm.get('playerSurname').errors?.required">Surame: empty!</div>
+    <!-- number -->
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('number').errors?.min">Number: number between 1-99</div>
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('number').errors?.max">Number: number between 1-99</div>
+    <div class="alert alert-danger" *ngIf="addPlayerForm.get('number').errors?.required">Number: empty!</div>
+    <!-- height -->
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('height').errors?.min">Height: number between 130-250</div>
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('height').errors?.max">Height: number between 130-250</div>
+    <div class="alert alert-danger" *ngIf="addPlayerForm.get('height').errors?.required">Height: empty!</div>
+    <!-- appearances -->
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('appearances').errors?.min">Appearances: number between 0-999</div>
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('appearances').errors?.max">Appearances: number between 0-999</div>
+    <div class="alert alert-danger" *ngIf="addPlayerForm.get('appearances').errors?.required">Appearances: empty!</div>
+    <!-- position -->
+    <div class="alert alert-warning" *ngIf="addPlayerForm.get('position').errors?.required">Position: select player position</div>
+   
+    <div class="modal-footer">
+        <button type="submin" class="btn btn-secondary" (click)="addPlayerToTeam()" data-dismiss="modal" [disabled]="!addPlayerForm.valid">Add</button>
+    </div>
 </form>
 
 

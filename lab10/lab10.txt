@@ -1,0 +1,27 @@
+WEBPACK
+    - TRANSPILER/KOMPILATOR do ES5
+    - OPTYMALIZACJA
+    - BUNDLE (LAZY MODULE LOADING)
+    - UGLYFICATION (ZACIEMNIANIE KODU) <- APLIKACJE FRONT ENDOWE DAJĄ UZYTKOWNIKOWI CALY KOD APLIKACJI!!!(GWT)
+
+
+kierunki dla FRON-END DEVELOPERA
+    - DEBUGING 
+    - SECURITY  (OAUTH 2.0)
+                (OPENID CONNECT)
+    - HTTP/REST -> RESPONSE CODE 
+                    200.. SUKCES
+                    300.. REDIRECT
+                    400.. BLEDY
+                    500. SERVER ERROR
+    - JSON
+    - TESTOWANIE AUTOMATYCZNE
+        - "SELENIUM WEB DRIVER"
+    - MOCK (DI)
+
+
+_____________ZADANIE_________________
+    -dane jako Observable np.   Observable<Person>
+                                Observable<Person[]>
+    
+https://jsonplaceholder.typicode.com <-- api dla typowych jsonów 

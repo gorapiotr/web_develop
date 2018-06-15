@@ -9,44 +9,55 @@
         </button>
       </div>
       <div class="modal-body">
-          <form *ngIf="model != undefined" #editPlayerForm="ngForm" ngNativeValidate>
-              <div class="form-group">
-                <label for="playerName">Name</label>
-                <input type="text" class="form-control" id="playerName" required [(ngModel)]="model.playerName" name="playerName">
-              </div>
-              <div class="form-group">
-                <label for="playerSurname">Surname</label>
-                <input type="text" class="form-control" id="playerSurname" [(ngModel)]="model.playerSurname" name="playerSurname">
-              </div>
-              <div class="form-group">
-                  <label for="playerNuber">Number</label>
-                  <input type="number" class="form-control" id="playerNumber" [(ngModel)]="model.number" name="playerNumber">
-              </div>
-              <div class="form-group">
-                  <label for="playerHeight">Height</label>
-                  <input type="number" class="form-control" id="playerHeight" [(ngModel)]="model.height" name="playerHeight">
-              </div>
-              <div class="form-group">
-                  <label for="playerAppearances">Appearances</label>
-                  <input type="number" class="form-control" id="Appearances" [(ngModel)]="model.appearances" name="playerAppearances">
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-          </form>
+        <form [formGroup]="editPlayerForm" >
+          <div class="form-group">
+            <label for="playerName">Name</label>
+            <input type="text" class="form-control" formControlName="playerName">
+          </div>
+          <div class="form-group">
+            <label for="playerSurname">Surname</label>
+            <input type="text" class="form-control" formControlName="playerSurname">
+          </div>
+          <div class="form-group">
+            <label for="playerNumber">Number</label>
+            <input type="number" class="form-control" formControlName="number">
+          </div>
+          <div class="form-group">
+            <label for="playerNumber">Height</label>
+            <input type="number" class="form-control" formControlName="height">
+          </div>
+          <div class="form-group">
+            <label for="playerNumber">Appearances</label>
+            <input type="number" class="form-control" formControlName="appearances">
+          </div>
+          <!-- alerts -->
+          <!-- name -->
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('playerName').errors?.minlength">Name: min 3 chars</div>
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('playerName').errors?.maxlength">Name: max 20 chars</div>
+          <div class="alert alert-danger" *ngIf="editPlayerForm.get('playerName').errors?.required">Name: empty!</div>
+          <!-- surname -->
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('playerSurname').errors?.minlength">Surname: min 3 chars</div>
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('playerSurname').errors?.maxlength">Surame: max 20 chars</div>
+          <div class="alert alert-danger" *ngIf="editPlayerForm.get('playerSurname').errors?.required">Surame: empty!</div>
+          <!-- number -->
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('number').errors?.min">Number: number between 1-99</div>
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('number').errors?.max">Number: number between 1-99</div>
+          <div class="alert alert-danger" *ngIf="editPlayerForm.get('number').errors?.required">Number: empty!</div>
+          <!-- height -->
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('height').errors?.min">Height: number between 130-250</div>
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('height').errors?.max">Height: number between 130-250</div>
+          <div class="alert alert-danger" *ngIf="editPlayerForm.get('height').errors?.required">Height: empty!</div>
+          <!-- appearances -->
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('appearances').errors?.min">Appearances: number between 0-999</div>
+          <div class="alert alert-warning" *ngIf="editPlayerForm.get('appearances').errors?.max">Appearances: number between 0-999</div>
+          <div class="alert alert-danger" *ngIf="editPlayerForm.get('appearances').errors?.required">Appearances: empty!</div>
+         
+          <div class="modal-footer">
+            <button type="submin" class="btn btn-secondary" (click)="onEdit()" data-dismiss="modal" [disabled]="!editPlayerForm.valid">Save</button>
+          </div>
+         </form>
       </div>
     </div>
   </div>
-
-  <!-- TEST -->
-  <form [formGroup]="editPlayerForm">
-      <div formGroupName="name">
-        <input formControlName="first" placeholder="First">
-        <input formControlName="last" placeholder="Last">
-      </div>
-      <input formControlName="email" placeholder="Email">
-      <button>Submit</button>
-  </form>
-
 </div>
 

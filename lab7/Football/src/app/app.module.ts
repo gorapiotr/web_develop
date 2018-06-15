@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { FindPlayerComponent } from './component/find-player/find-player.compone
 import { ReactiveFormsModule } from '@angular/forms';
 import { RemovePlayerComponent } from './component/remove-player/remove-player.component';
 import { TeamService } from './service/team.service';
+import { LeagueTableComponent } from './component/league-table/league-table.component';
 
 
 @NgModule({
@@ -22,15 +25,18 @@ import { TeamService } from './service/team.service';
     AddPlayerToTeamComponent,
     EditPlayerComponent,
     FindPlayerComponent,
-    RemovePlayerComponent
+    RemovePlayerComponent,
+    LeagueTableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
     
   ],
   providers: [TeamService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
