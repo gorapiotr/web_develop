@@ -24,13 +24,6 @@ app.use(function (req, res, next) {
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-
-app.route('/api/cats').get((req, res) => {
-    res.send({
-      cats: [{ name: 'lilly' }, { name: 'lucy' }]
-    });
-  });
-
 app.route('/getLeagueTable').get((req, res) => {
   res.send(JSON.stringify([
       {position: 1, teamName: "Manchester City", points: 100},
@@ -42,4 +35,4 @@ app.route('/getLeagueTable').get((req, res) => {
   )
 )});
 
-app.listen(4003, () => console.log('Example app listening on port 4002!'))
+app.listen(4003, () => console.log('Football app listening on port 4003!'))

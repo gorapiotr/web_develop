@@ -33,4 +33,9 @@ Stworzenie klas w TypeScript i transpilacja do JavaScript za pomocą babel
 * [Zadanie](https://github.com/gorapiotr/web_develop/tree/master/lab7/Football/src/app) (CRUD dla tematu FootballTeam w Angular)
 
 ## Lab 8
-* [Zadanie](https://github.com/gorapiotr/web_develop/blob/master/lab7/Football/src/app/find-player/find-player.component.ts) (Wyszukiwarka piłkarzy z wykorzystaniem ReactiveForm i subscribe)
+* [Zadanie](https://github.com/gorapiotr/web_develop/tree/master/lab7/Football/src/app/component/find-player) (Wyszukiwarka piłkarzy z wykorzystaniem ReactiveForm i subscribe)
+
+## Lab 9-10
+* [Expressjs](https://github.com/gorapiotr/web_develop/tree/master/lab7/Football/src/app/service)(Serwisy)
+* [Formularze](https://github.com/gorapiotr/web_develop/tree/master/lab7/Football/src/app/component/edit-player)(Edycja zawodnika)
+* [Expressjs](https://github.com/gorapiotr/web_develop/blob/master/lab10/expressjs/app.js)(routing servera)
